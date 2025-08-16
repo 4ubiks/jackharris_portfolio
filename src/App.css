@@ -1,38 +1,140 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+}*/
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1b1d20;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}*/
+
+/**/
+/* Custom Components */
+.Title{
+  font-size:5ch;
+  font-weight:bolder;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+
+  color: rgb(129, 118, 118);
+  padding-top:5ch;
+}
+
+.Subtitle{
+  font-size: 2ch;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  
+  color: rgb(129, 118, 118);
+}
+
+/**/
+/* Navbar */
+.Navbar-header{
+  background-color: #1e1f21;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(2px + 2vmin);
+  height: 7vmin;
+  padding: 0rem 20rem;
+}
+
+.Navbar-text{
+  font-family:"Source Code Pro", monospace;
+  font-weight:bolder;
+
+  color:aliceblue;
+}
+
+.Navbar-right {
+  display: flex;
+  gap: 2rem; /* evenly spaced right items */
+}
+
+.Spacing {
+  margin: 0rem 15rem;
+}
+
+/**/
+/* Blog */
+.Blog-title{
+  font-size:5ch;
+  font-weight:bolder;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+
+  color: rgb(129, 118, 118);
+  padding: 0rem 0rem;
+}
+
+.Blog-subtitle{
+  font-size: 3ch;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  font-weight:bold;
+
+  color: rgb(169, 160, 160);
+}
+
+.Blog-postTitle{
+  font-size:2ch;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+
+  color: rgb(255, 255, 255);
+}
+
+.Blog-text {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  padding: 0rem 20rem;
+}
+
+.markdown-container h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.markdown-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #959595;
+}
+
+.markdown-container h3 {
+  text-decoration:underline;
+}
+
+.article {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: flex-start; /* align all items to the left */
+  gap: 4px; /* optional spacing between lines */
+}
+
+.Year {
+  padding: 0rem 0rem;
+  padding-right: 40rem;
 }
