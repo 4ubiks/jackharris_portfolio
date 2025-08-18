@@ -10,12 +10,6 @@
   pointer-events: none;
 }
 
-/*@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}*/
-
 .App-header {
   background-color: #1b1d20;
   min-height: 100vh;
@@ -25,15 +19,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-/*@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
 
 /**/
 /* Custom Components */
@@ -51,6 +36,10 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
   
   color: rgb(129, 118, 118);
+}
+
+.icon {
+  display: flex;
 }
 
 /**/
@@ -82,6 +71,24 @@
 }
 
 /**/
+/* Footer */
+.Footer-header{
+  background-color: #18191a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2px + 2vmin);
+  height: 7vmin;
+  padding: 0rem 20rem;
+}
+
+.Footer-text{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  color:bisque;
+  gap: 4rem;
+}
+
+/**/
 /* Blog */
 .Blog-title{
   font-size:5ch;
@@ -110,6 +117,7 @@
 .Blog-text {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
   padding: 0rem 20rem;
+  padding-bottom: 5rem;
 }
 
 .markdown-container h1 {
@@ -137,4 +145,25 @@
 .Year {
   padding: 0rem 0rem;
   padding-right: 40rem;
+}
+
+/**/
+/* Portfolio */
+.Portfolio-space {
+  padding-top: 5rem;
+}
+
+/**/
+/* Skils */
+.Skills-space {
+  padding-top: 2rem;
+}
+
+.Skills-title{
+  font-size:5ch;
+  font-weight:bolder;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+
+  color: rgb(129, 118, 118);
+  padding-top:2ch;
 }

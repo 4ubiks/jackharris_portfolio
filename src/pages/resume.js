@@ -8,6 +8,7 @@ export const Resume = () =>{
                 <p className="Title Spacing">
                   resume.
                 </p>
+                <a href="/resume/skills">my skills</a>
               </header>
             </div>
           );
