@@ -13,10 +13,13 @@ export const Home = () =>{
                   Jack Harris
                 </p>
                 <p className="Subtitle">
-                  Software Engineer
+                  Software Engineer / Aspiring 'The lighting guy'
                 </p>
                 <p className="Subtitle icon">
                   <a href="https://github.com/4ubiks" target="_blank" rel="noreferrer"><DiGithubBadge/></a><a href="https://www.linkedin.com/in/jack-harris-professional/" target="_blank" rel="noreferrer"><FaLinkedin/></a>
+                </p>
+                <p className="Subtitle icon Padding_top">
+                  currently listening to:
                 </p>
               </header> 
               <Footer></Footer>

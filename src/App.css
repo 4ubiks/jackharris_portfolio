@@ -38,6 +38,10 @@
   color: rgb(129, 118, 118);
 }
 
+.Padding_top{
+  padding-top: 3rem;
+}
+
 .icon {
   display: flex;
 }
@@ -87,6 +91,73 @@
   color:bisque;
   gap: 4rem;
 }
+
+/**/
+/* Resume */
+.Res_Subtitle{
+  font-size: 2ch;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  font-style:italic;
+  border-bottom: 1px solid #ddd;
+  
+  color: rgb(129, 118, 118);
+}
+
+.Res_JobDesc{
+  font-style:italic;
+}
+
+.Res_Title{
+  font-weight:700;
+}
+
+.Res_TitleSpace{
+  padding-top:2rem;
+}
+
+.Res_ExpSpace{
+  padding-top:1rem;
+}
+
+.Res_item {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto; /* centers & adds spacing */
+}
+
+.Res_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  flex: 1;
+  overflow: hidden;  
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+  
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* left grows, right fixed to content */
+  justify-content: space-between; /* pushes content outward */
+  align-items: center;
+  padding: 0.5rem;
+  width:60%;
+  gap: 20rem;
+}
+
+.row .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;  /* left justified */
+}
+
+.row .date {
+  white-space: nowrap;
+  text-align: right; /* right justified */
+}
+  
 
 /**/
 /* Blog */
