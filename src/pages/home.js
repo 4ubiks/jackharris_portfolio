@@ -11,7 +11,7 @@ export const Home = () =>{
       fetch("https://api.spotify.com/v1/me/player/currently-playing", {
         method: "GET",
         headers:{
-          "Authorization": `Bearer BQB50jqd28at7-DFKE445h6-aLkZbvKnqaxRAk7BcTbVM1o-MzF6_Cp7c4wjV31Nqxkmel147PXkctDn038QMkXFmzZuVTByH4HNUn46iE0aRIOEtIpa3fEGjKdMq0R2P7PnkItG4cZOfVt34lqyR_gMPKeuW-WWcLhKmBEtViisdJNej7qAJfcd5NUXNsPjcUNg1DeBJ2W56GvgWLhuUxyhjk6hc6U  `,
+          "Authorization": `Bearer BQCp7qytK8GDeQHcKNTvYDr0zOpgB3fQG3gQdTv6SDWc7Tl2c0mpIvqsurpua8diL7LLRq_7b9qRl2UnSI8tyJnRi8YoK338w0SYx8gDPQVFdi32ZY5PZle1i3gWx_TpPPEnrL8B51PoV8LJPQ7jjU4ezMDAeD4rO9Er17Z50uYYE_sNyBWQqqT21nIB3iEUMAcpQ5CFA9EMKHSrxYT5GOrqG8g8_Ik`,
         },
       })
         .then((res) => res.json())
