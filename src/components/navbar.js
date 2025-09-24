@@ -3,6 +3,7 @@ export default function Navbar(){
       <nav className="Navbar-header Navbar-text">
       <div className="Navbar-left">
         <a href="/">{'>'} jackharris@lighting:~$</a>
+        <a className="Sudo" href="/terminal"> wsl</a>
       </div>
       <div className="Navbar-right">
         <a href="/portfolio">Portfolio</a>

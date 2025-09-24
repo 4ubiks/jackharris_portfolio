@@ -1,11 +1,48 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {Home} from "./home";
 
 export const Terminal = () =>{
     const [value, setValue] = useState("");
     const [draft, setDraft] = useState("");
+    const [argument, setArgument] = useState("");
     let [showCommandOutput, setShowCommandOutput] = useState(false);
+    let [catFile, setCatFile] = useState(false);
     let output = useState("");
+
+    const commandOutputs = {
+        help: [
+            "'help' - list all commands",
+            "'cat' - open contents of a file (type .md)",
+            "'ls' - list contents of this website",
+            "'clear' - clears the screen",
+            "'curl' - opens a URL (type .url)",
+            "'ret' - return to normal view of website"
+        ],
+        ls: [
+            "'resume.md' 'portfolio.md' 'linkedin.url'",
+            "'github.url' 'skills.md' 'myCode.lua'",
+            "'about.md'"
+        ],
+        cat: [""],
+        clear: ["clear"],
+        curl: ["expecting an argument"],
+        ret: ["return to main website"]
+    };
+    const navigate = useNavigate();
+
+    const argSwitch = (argument) => {
+        if (value === "curl"){
+            switch (argument){
+                case "linkedin.url":
+                    console.log(argument);
+                    window.open("https://www.linkedin.com", "_blank");
+                case "github.url":
+                    window.open("https://www.github.com/4ubiks", "_blank");
+        }
+        }
+        
+    }
 
     const commandHelp = (cmd) =>{
         switch (cmd) {
@@ -20,6 +57,7 @@ export const Terminal = () =>{
             case "curl":
                 return "go to url";
             case "ret":
+                navigate("/");
                 return "returning to original website";
             default:
                 return "Unknown command encountered - type 'help' for list of commands.";
@@ -60,19 +98,25 @@ export const Terminal = () =>{
 
     const handleKeyDown = (e) =>{
         if (e.key === "Enter"){
-            setValue(draft);
-            console.log("Command: ", value);
+            setValue(draft.split(/\s/)[0]);
+            if (draft.split(/\s/)[1]){
+                setArgument(draft.split(/\s/)[1]);
+                setCatFile(true);
+                argSwitch(draft.split(/\s/)[1]);
+            }
+            else{
+                setCatFile(false);
+            }
+            console.log("Argument: ", draft.split(/\s/)[1]);
             handleValue(draft);
             commandHelp(draft);
             setDraft("");
         }
-
         else if (e.ctrlKey && e.key == "c"){
             console.log("CTRL+C Encountered");
             setValue("");
         }
     }
-
 
     return(
         <div className="Terminal">
@@ -92,34 +136,23 @@ export const Terminal = () =>{
                 />
             </p>
         <div>
-            {showCommandOutput && value == "help" ? "'help' - list all commands" : ""}
-            <p/>
-            {showCommandOutput && value == "help" ? "'cat' - open contents of a file" : ""}
-            <p/>
-            {showCommandOutput && value == "help" ? "'ls' - list contents of this website (type .md)" : ""}
-            <p/>
-            {showCommandOutput && value == "help" ? "'clear' - clears the screen" : ""}
-            <p/>
-            {showCommandOutput && value == "help" ? "'curl' - opens a URL (type .url)" : ""}
-            <p/>
-            {showCommandOutput && value == "help" ? "'ret' - return to normal view of website" : ""}
+            {showCommandOutput &&
+            (commandOutputs[value]?.map((line) => (
+                <p>{line}</p>
+            )) || <p>Unknown command: '{value}', Use 'help' to see available commands</p>)
+            }
         </div>
         <div>
-            {showCommandOutput && value == "ls" ? "'resume.md' 'portfolio.md' 'linkedin.url'" : ""}
-            <p></p>
-            {showCommandOutput && value == "ls" ? "'github.url' 'skills.md' 'myCode.lua'" : ""}
+            {catFile && argument == "resume.md" ? "i have experience" : ""}
         </div>
         <div>
-            {showCommandOutput && value == "cat" ? "catting a file" : ""}
+            {catFile && argument == "portfolio.md" ? "i do lighting" : ""}
         </div>
         <div>
-            {showCommandOutput && value == "clear" ? "clear" : ""}
+            {catFile && argument == "skills.md" ? "i am skilled" : ""}
         </div>
         <div>
-            {showCommandOutput && value == "curl" ? "expecting an argument" : ""}
-        </div>
-        <div>
-            {showCommandOutput && value == "ret" ? "return to main website" : ""}
+            {catFile && argument == "about.md" ? "i like lighting" : ""}
         </div>
         </div>
     )
