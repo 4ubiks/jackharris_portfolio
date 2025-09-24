@@ -5,6 +5,7 @@ import {Resume} from './pages/resume.js';
 import {Portfolio} from './pages/portfolio.js';
 import {Blog} from './pages/blog.js';
 import {ETCBlog} from './pages/blogs/etcInternship.js'
+import {Terminal} from './pages/terminal.js';
 
 export const Path = () => {
     return(
@@ -22,6 +23,8 @@ export const Path = () => {
                     </Route>
                 
                 <Route path="/blog/etcDevOps" element={<ETCBlog/>}>
+                    </Route>
+                <Route path="/terminal" element={<Terminal/>}>
                     </Route>
             </Routes>
         </Router>
