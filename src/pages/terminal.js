@@ -24,10 +24,21 @@ export const Terminal = () =>{
             "'github.url' 'skills.md' 'myCode.lua'",
             "'about.md'"
         ],
+        ll: [
+        	"drwxrwxrwx 1 jack jack 512 Today Date Time: 'about.md'",
+        	"drwxrwxrwx 1 jack jack 512 Today Date Time: 'github.url'",
+        	"drwxrwxrwx 1 jack jack 512 Today Date Time: 'linkedin.url'",
+        	"drwxrwxrwx 1 jack jack 512 Today Date Time: 'myCode.lua'",
+        	"drwxrwxrwx 1 jack jack 512 Today Date Time: 'portfolio.md'",
+        	"drwxrwxrwx 1 jack jack 512 Today Date Time: 'resume.md'"
+        ],
         cat: [""],
-        clear: ["clear"],
-        curl: ["expecting an argument"],
-        ret: ["return to main website"]
+        clear: [""],
+        curl: ["Use: `curl file.url`"],
+        ret: ["return to main website"],
+        cd: ["inode->i_block[EXT2_FIRST_INDIRECT_BLOCK] == EMPTY"],
+        mkdir: ["no filesystem, you can't do that."],
+        zoey: ["she's pretty"]
     };
     const navigate = useNavigate();
 
@@ -65,7 +76,6 @@ export const Terminal = () =>{
     };
 
     const handleValue = (cmd) =>{
-        console.log("passed cmd: ", cmd);
         if (cmd == "help"){
             setShowCommandOutput(true);
             console.log("Asked for help");
@@ -98,7 +108,10 @@ export const Terminal = () =>{
 
     const handleKeyDown = (e) =>{
         if (e.key === "Enter"){
+        	console.log("ENTER pressed. ", draft.split(/\s/)[0]);
             setValue(draft.split(/\s/)[0]);
+            handleValue(draft.split(/\s/)[0]);
+            commandHelp(draft.split(/\s/)[0]);
             if (draft.split(/\s/)[1]){
                 setArgument(draft.split(/\s/)[1]);
                 setCatFile(true);
@@ -107,9 +120,6 @@ export const Terminal = () =>{
             else{
                 setCatFile(false);
             }
-            console.log("Argument: ", draft.split(/\s/)[1]);
-            handleValue(draft);
-            commandHelp(draft);
             setDraft("");
         }
         else if (e.ctrlKey && e.key == "c"){
