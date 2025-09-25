@@ -34,7 +34,7 @@ export const Resume = () =>{
                   <div class="date">Aug, 2025 - Current</div>
                 </div>
                 <div class="row Res_margin">
-                  <div class="title Res_JobDesc lowertitle">Electronic Theatre Controls / HighEnd System</div>
+                  <div class="title Res_JobDesc lowertitle">Electronic Theatre Controls / HighEnd Systems</div>
                   <div class="date lowertitle">Remote</div>
                 </div>
                 <div class="row">
@@ -42,7 +42,7 @@ export const Resume = () =>{
                   <div class="date">Jan, 2025 - Current</div>
                 </div>
                 <div class="row Res_margin">
-                  <div class="title Res_JobDesc lowertitle">Liberty University Campus Productio</div>
+                  <div class="title Res_JobDesc lowertitle">Liberty University Campus Production</div>
                   <div class="date lowertitle">Lynchburg, VA</div>
                 </div>
                 <div class="row Res_ExpSpace">
@@ -50,7 +50,7 @@ export const Resume = () =>{
                   <div class="date">May, 2025 - Aug, 2025</div>
                 </div>
                 <div class="row Res_margin">
-                  <div class="title Res_JobDesc lowertitle">Electronic Theatre Control</div>
+                  <div class="title Res_JobDesc lowertitle">Electronic Theatre Controls</div>
                   <div class="date lowertitle">Middleton, WI</div>
                 </div>                
                 <div class="row Res_ExpSpace">
@@ -58,7 +58,7 @@ export const Resume = () =>{
                   <div class="date">Jul, 2025 - Aug, 2024</div>
                 </div>
                 <div class="row Res_margin">
-                  <div class="title Res_JobDesc lowertitle">ACT Entertainmen</div>
+                  <div class="title Res_JobDesc lowertitle">ACT Entertainment</div>
                   <div class="date lowertitle">Hackensack, NJ</div>
                 </div>
                 <div class="row Res_ExpSpace">
