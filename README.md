@@ -11,7 +11,7 @@ It is still a React/Node.JS app built with NPM, that component has not changed. 
 The app runs with `npm start` when inside the parent directory `jackharris_portfolio`. 
 
 ## Terminal
-One cool feature I decided to add to my new portfolio was a Linux-based terminal. Not implying the architecture of the website is at all related to the Linux kernel, but the commands used and style of the terminal would mirror Linux. Below are the commands:
+One cool feature I decided to add to my new portfolio was a Linux-inspired terminal. Not implying the architecture of the website is at all related to the Linux kernel, but the commands used and style of the terminal would mirror Linux. Below are the commands:
 
 `help` - displays all commands
 `cat ____` - prints out a given file, if it exists
