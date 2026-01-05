@@ -10,6 +10,12 @@ It is still a React/Node.JS app built with NPM, that component has not changed. 
   
 The app runs with `npm start` when inside the parent directory `jackharris_portfolio`. 
 
+## TODO (1/5/2025)
+- [ ] Add current lighting projects
+- [ ] Add current coding projects (snake, Hog BT)
+- [ ] Update Resume
+- [ ] Spotify access?
+
 ## Terminal
 One cool feature I decided to add to my new portfolio was a Linux-inspired terminal. Not implying the architecture of the website is at all related to the Linux kernel, but the commands used and style of the terminal would mirror Linux. Below are the commands:
 
@@ -28,3 +34,5 @@ And below are the files that 'exist':
 `linkedin.url`
 `github.url`
 `spotify.url`
+
+Again, it's *all* frontend. No backend stuff for the terminal. Just a cool feature, because I like Linux
