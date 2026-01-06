@@ -33,7 +33,7 @@ export const Home = () =>{
                   <a href="https://github.com/4ubiks" target="_blank" rel="noreferrer"><DiGithubBadge/></a><a href="https://www.linkedin.com/in/jack-harris-professional/" target="_blank" rel="noreferrer"><FaLinkedin/></a>
                 </p>
                 <p className="Subtitle icon Padding_top">
-                  currently listening to:
+                  Currently listening to:
                 </p>
                   {data ? <pre className="">{data.name} by {data.artist[0]}</pre> : "No song found..."}
               </header> 

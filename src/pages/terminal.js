@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {Home} from "./home";
 
 export const Terminal = () =>{
     const [value, setValue] = useState("");
@@ -8,7 +7,7 @@ export const Terminal = () =>{
     const [argument, setArgument] = useState("");
     let [showCommandOutput, setShowCommandOutput] = useState(false);
     let [catFile, setCatFile] = useState(false);
-    let output = useState("");
+    //let output = useState("");
 
     const commandOutputs = {
         help: [
@@ -37,8 +36,7 @@ export const Terminal = () =>{
         curl: ["Use: `curl file.url`"],
         ret: ["return to main website"],
         cd: ["inode->i_block[EXT2_FIRST_INDIRECT_BLOCK] == EMPTY"],
-        mkdir: ["no filesystem, you can't do that."],
-        zoey: ["she's pretty"]
+        mkdir: ["no filesystem, you can't do that."]
     };
     const navigate = useNavigate();
 
@@ -47,9 +45,13 @@ export const Terminal = () =>{
             switch (argument){
                 case "linkedin.url":
                     console.log(argument);
-                    window.open("https://www.linkedin.com", "_blank");
+                    window.open("https://www.linkedin.com/in/jack-harris-professional/", "_blank");
+                    break;
                 case "github.url":
                     window.open("https://www.github.com/4ubiks", "_blank");
+                    break;
+                default:
+                    return
         }
         }
         
@@ -76,27 +78,27 @@ export const Terminal = () =>{
     };
 
     const handleValue = (cmd) =>{
-        if (cmd == "help"){
+        if (cmd === "help"){
             setShowCommandOutput(true);
             console.log("Asked for help");
         }
-        else if (cmd == "cat"){
+        else if (cmd === "cat"){
             setShowCommandOutput(true);
             console.log("Attempting to open a file");
         }
-        else if (cmd == "ls"){
+        else if (cmd === "ls"){
             setShowCommandOutput(true);
             console.log("Listing contents");
         }
-        else if (cmd == "clear"){
+        else if (cmd === "clear"){
             setShowCommandOutput(false);
             console.log("Clearing the screen");
         }
-        else if (cmd == "curl"){
+        else if (cmd === "curl"){
             setShowCommandOutput(true);
             console.log("Curling to a website");
         }
-        else if (cmd == "ret"){
+        else if (cmd === "ret"){
             setShowCommandOutput(true);
             console.log("Returning to normal view");
         }
@@ -122,7 +124,7 @@ export const Terminal = () =>{
             }
             setDraft("");
         }
-        else if (e.ctrlKey && e.key == "c"){
+        else if (e.ctrlKey && e.key === "c"){
             console.log("CTRL+C Encountered");
             setValue("");
         }
@@ -153,16 +155,16 @@ export const Terminal = () =>{
             }
         </div>
         <div>
-            {catFile && argument == "resume.md" ? "i have experience" : ""}
+            {catFile && argument === "resume.md" ? "i have experience" : ""}
         </div>
         <div>
-            {catFile && argument == "portfolio.md" ? "i do lighting" : ""}
+            {catFile && argument === "portfolio.md" ? "i do lighting" : ""}
         </div>
         <div>
-            {catFile && argument == "skills.md" ? "i am skilled" : ""}
+            {catFile && argument === "skills.md" ? "i am skilled" : ""}
         </div>
         <div>
-            {catFile && argument == "about.md" ? "i like lighting" : ""}
+            {catFile && argument === "about.md" ? "i like lighting" : ""}
         </div>
         </div>
     )
