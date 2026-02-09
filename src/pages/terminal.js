@@ -158,6 +158,9 @@ export const Terminal = () =>{
             {catFile && argument === "resume.md" ? "i have experience" : ""}
         </div>
         <div>
+            {catFile && argument === "myCode.lua" ? "for k,v in ipairs(choice) do" : ""}
+        </div>
+        <div>
             {catFile && argument === "portfolio.md" ? "i do lighting" : ""}
         </div>
         <div>
@@ -171,3 +174,4 @@ export const Terminal = () =>{
 };
 
 export default Terminal;
+
