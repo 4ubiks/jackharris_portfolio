@@ -38,7 +38,7 @@ export const Resume = () =>{
                   <div class="date lowertitle">Remote</div>
                 </div>
                 <div class="row">
-                  <div class="title Res_Title">Student Production Technician</div>
+                  <div class="title Res_Title">Broadcast Apprentice</div>
                   <div class="date">Jan, 2025 - Current</div>
                 </div>
                 <div class="row Res_margin">
@@ -105,4 +105,5 @@ export const Resume = () =>{
               <Footer/>
             </div>
           );
+
 }
