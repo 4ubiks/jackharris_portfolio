@@ -134,7 +134,7 @@ export const Terminal = () =>{
     return(
         <div className="Terminal">
             <p>
-                > jackharris@lighting:~$ {" "}
+                {'>'} jackharris@lighting:~$ {" "}
                 <input
                     type="text"
                     value={draft}
