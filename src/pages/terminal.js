@@ -36,7 +36,8 @@ export const Terminal = () =>{
         curl: ["Use: `curl file.url`"],
         ret: ["return to main website"],
         cd: ["inode->i_block[EXT2_FIRST_INDIRECT_BLOCK] == EMPTY"],
-        mkdir: ["no filesystem, you can't do that."]
+        mkdir: ["no filesystem, you can't do that."],
+        micro: ["i love micro. go to micro-editor.github.io"]
     };
     const navigate = useNavigate();
 
@@ -174,4 +175,5 @@ export const Terminal = () =>{
 };
 
 export default Terminal;
+
 
